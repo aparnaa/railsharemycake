@@ -45,6 +45,7 @@ var f1 = new LiveValidation('_myevent_mobile_number');
 f1.add( Validate.Presence ); 
 
 f1.add( Validate.Numericality, { onlyInteger: true } );
+f1.add( Validate.Length, { maximum: 10 } );
 </script>
  <script>
 var f2 = new LiveValidation('_myevent_title');
