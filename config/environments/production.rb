@@ -50,7 +50,7 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain,
   :enable_starttls_auto => true,
   :user_name => "m.aparnaa25@gmail.com",
-  :password => 'meprincess'
+  :password => '**********'
 }
 
   # Send deprecation notices to registered listeners
