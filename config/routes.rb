@@ -1,29 +1,17 @@
 Newapp::Application.routes.draw do
 
-  #get "invoices/index"
-  #get "invoices/show"
-  #get "transactions/new"
 
    get "transactions/index"
    get "transactions/error"
    get "transactions/done"
-  #resources :myevents  
-      #resources :myevents do
-  #resources :posts
-  #end
 
-  #resources :invoices
   get "home/orgshow"
   get "home/orgdetail"
   get "myevents/adminindex"
   get "myevents/index"
 
-  #get "myevents/new"
-  #get "myevents/create"
-  #get "myevents/show"
 
   resources :invitations
-  resources :comments
   resources :contacts
   resources :organisations
 
@@ -35,7 +23,6 @@ Newapp::Application.routes.draw do
  
 devise_for :members
 match 'home/orgdetail/:id'=>'home#orgdetail'
-#match 'organisations'=>'organisations#index'
 match 'members/edit'=>'members#edit'
 match 'myevents/cause' => 'myevents#cause'
 match 'myevents/event' => 'myevents#event'
@@ -55,8 +42,7 @@ match 'home/term' => 'home#term'
 match 'transactions/new/:id' => 'transactions#new'
 match 'transactions/create' => 'transactions#create'
 match 'invoices/calculation'=> 'invoices#calculation'
-#match 'myevents/index' => 'myevents#index'
-#match 'myevents/show' => 'myevents#show'	
+
 match 'devise/home/search' => 'home#search'
 match 'home/search' => 'home#search'
 match 'invoices/index' => 'invoices#index'
