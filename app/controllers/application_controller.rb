@@ -13,7 +13,6 @@ def after_sign_in_path_for resource_or_scope
 def after_sign_out_path_for(resource_or_scope)
     new_member_session_path
   end 
-# has_many :organizations, :class_name => 'Organization', :foreign_key => :organisation_id
 
 end
 

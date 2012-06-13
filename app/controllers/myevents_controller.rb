@@ -35,7 +35,6 @@ def cause
 date=params[:@myevent][:date]
 
 parameters=params["@myevent"]
-# parameters.keys
 
  @year=parameters["date(1i)"]
  @month=parameters["date(2i)"]
@@ -44,10 +43,7 @@ parameters=params["@myevent"]
  @hr=parameters["time(4i)"]
  @min=parameters["time(5i)"]
  @time=DateTime.strptime("#{@month}/#{@day}/#{@year} #{@hr}:#{@min}:0", '%m/%d/%Y %H:%M:%S')
-	#@day=params[:@myevents][:date(1i)] 
-	#@month=params[:@myevents][:date(2i)] 
-	#@year=params[:@myevents][:date(3i)]
-	#@date=Date.civil(@day.to_i,@month.to_i,@year.to_i)
+
 	
     puts session[:value]={:phone_number=>params[:@myevent][:mobile_number], :title=>params[:@myevent][:title], :date=>@date, :time=>@time, :venue=>params[:@myevent][:venue], :description=>params[:@myevent][:description]}
 
@@ -94,11 +90,7 @@ def template
 end
 
 def message
-#@a=Contact.find_all_by_member_id(current_member.id).email
-#@email=Array.new
-#@a.each do |a|
-# @email<< a.email
-#end
+
 
  
   if params[:Template]=="Template1"
@@ -129,7 +121,6 @@ def cause
 date=params[:@myevent][:date]
 
 parameters=params["@myevent"]
-# parameters.keys
 
  @year=parameters["date(1i)"]
  @month=parameters["date(2i)"]
@@ -138,10 +129,7 @@ parameters=params["@myevent"]
  @hr=parameters["time(4i)"]
  @min=parameters["time(5i)"]
  @time=DateTime.strptime("#{@month}/#{@day}/#{@year} #{@hr}:#{@min}:0", '%m/%d/%Y %H:%M:%S')
-	#@day=params[:@myevents][:date(1i)] 
-	#@month=params[:@myevents][:date(2i)] 
-	#@year=params[:@myevents][:date(3i)]
-	#@date=Date.civil(@day.to_i,@month.to_i,@year.to_i)
+
 	
     puts session[:value]={:mobile_number=>params[:@myevent][:mobile_number], :title=>params[:@myevent][:title], :date=>@date, :time=>@time, :venue=>params[:@myevent][:venue], :description=>params[:@myevent][:description]}
 
@@ -188,11 +176,7 @@ def template
 end
 
 def message
-#@a=Contact.find_all_by_member_id(current_member.id).email
-#@email=Array.new
-#@a.each do |a|
-# @email<< a.email
-#end
+
 
   if params[:Template]=="Template1"
     session[:value][:message] ="We’ll dance and cheer as a birthday is here . She will be turning one more year older so, let’s shout “happy birthday to you!"

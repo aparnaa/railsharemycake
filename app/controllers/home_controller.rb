@@ -3,7 +3,6 @@ class HomeController < ApplicationController
 def homepage
 end
 
-#before_filter :authenticate_member!
   def admin_login
   end
 

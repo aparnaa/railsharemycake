@@ -32,7 +32,6 @@ end
   end
 
  def contribution
-puts "------------"
   @invoice = Invoice.last
  @cont=@invoice.org_amt
 

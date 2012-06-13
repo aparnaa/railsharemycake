@@ -116,14 +116,9 @@ before_filter :authenticate_member!
         Notifier.send_mail(@mail,@myevent).deliver
 
 
-p '----------------'
-puts @myevent.inspect
-p '----------------'
 
 
 
-
-#@myevent = Myevent.all
   end
 
 

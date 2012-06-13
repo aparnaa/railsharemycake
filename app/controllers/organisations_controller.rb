@@ -1,5 +1,4 @@
 class OrganisationsController < ApplicationController
-# belongs_to :member, :class_name  => 'member'
  # GET /organisations
   # GET /organisations.xml
   def index
@@ -41,7 +40,6 @@ class OrganisationsController < ApplicationController
   # POST /organisations
   # POST /organisations.xml
   def create
-   # @organisation = Organisation.new(params[:organisation])
    @organisation = Organisation.new( :phone=>params[:organisation][:phone].to_s, :organisation_name=> params[:organisation][:organisation_name],
 	      :contact_person=> params[:organisation][:contact_person], :address_line1=> params[:organisation][:address_line1],
 	      :address_line2=> params[:organisation][:address_line2], :website=> params[:organisation][:website],  :email=> params[:organisation][:email], :status=> params[:organisation][:status],  :created_at=> params[:organisation][:created_at],  
@@ -70,7 +68,6 @@ class OrganisationsController < ApplicationController
     params[:organisation][:phone]=params[:organisation][:phone].to_s
     
     respond_to do |format|
-	    # if @organisation.update_attributes(:phone=>params[:organisation][:phone].to_s) 
       if @organisation.update_attributes(:phone=>params[:organisation][:phone].to_s, :organisation_name=> params[:organisation][:organisation_name],
 	      :contact_person=> params[:organisation][:contact_person], :address_line1=> params[:organisation][:address_line1],
 	      :address_line2=> params[:organisation][:address_line2], :website=> params[:organisation][:website],  :email=> params[:organisation][:email], :status=> params[:organisation][:status],  :created_at=> params[:organisation][:created_at],  
