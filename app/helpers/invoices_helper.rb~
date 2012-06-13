@@ -1,7 +1,0 @@
-module InvoicesHelper
-
-#def calculation(org_var, mem_var)
-	
-#end
-
-end

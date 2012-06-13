@@ -1,9 +1,0 @@
-
-<%= render :partial => "layouts/last" %>
-
-
-<h2>Thank you</h2>
-
-For the Payment made .
-
-<h3><%= link_to 'View My Contribution Amount', invoices_contribution_path %></h3>

@@ -1,3 +1,0 @@
-class PostWish < ActiveRecord::Base
-belongs_to:myevents
-end
