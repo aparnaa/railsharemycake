@@ -32,8 +32,6 @@ class TransactionsController < ApplicationController
   :verification_value  => '123'
 )
 
-  #@amount="#{params[:transaction][:amount]}"
-
   	if credit_card.valid?
   		 gateway=ActiveMerchant::Billing::PaypalGateway.new(
     :login => "john.n_1278592458_biz_api1.yahoo.co.in",
@@ -71,20 +69,13 @@ class TransactionsController < ApplicationController
   @invoice.org_amt=@orgamount
   @invoice.member_amt=@memberamount
   @invoice.save
-# @player=Player.find_by_id(params[:transaction][:player_id])
-# @q.sender=current_member.id
-	# @q.email=params[:@a][:email]
-	# @q.message=params[:message]
-	# @q.myevent_id=@eventid
-       	# @q.save
-   
+
 
    redirect_to '/transactions/done'
 
 end
   	   else
-    		#puts "Error: #{response.message}"
- flash[:notice] = "Sorry"
+             flash[:notice] = "Sorry"
             redirect_to '/transactions/error'
   	   end
 	end
